@@ -1,0 +1,114 @@
+.pack-wrapper div {
+    text-align: center;
+    display: block;
+}
+
+.pack-wrapper .pack-cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+}
+
+.pack-wrapper .pack-cover div {
+    width: 100%;
+    height: inherit;
+    border: 1px solid rgb(233, 127, 7);
+    border-color: transparent inherit inherit inherit;
+    padding: 15px 2px;
+}
+
+.pack-wrapper .pack-cover .cover-right h3 {
+    font-size: 20px;
+    transform: rotate3d(0, 0, -10, 25deg);
+    margin-top: 15px;
+}
+
+.pack-wrapper .pack-cover .cover-left h3 {
+    font-size: 20px;
+    transform: rotate3d(0, 0, -10, -25deg);
+    margin-top: 15px;
+}
+
+.pack-title {
+    border: none;
+    z-index: 1000;
+    min-height: 30px !important;
+}
+
+.pack-title div {
+    border: .3px solid rgb(233, 127, 7);
+    border-radius: 15px 15px 0 0;
+    height: auto;
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+.pack-outer {
+    padding: 15px 13px!important;
+    background: url('../images/pattern3.jpeg');
+    border-bottom-color: transparent!important;
+    margin-bottom: -10px;
+    border: groove 2px inherit;
+    box-shadow: 0px 3px 5px gold!important;
+}
+
+.pack-inner {
+    padding: 0px;
+    height: 10px!important;
+    background-color: #fff!important;
+}
+
+.pack-cover {
+    height: 100px;
+}
+
+.cover-left {
+    border-radius: 0 0 0px 90px;
+    border: solid goldenrod 1px;
+}
+
+.cover-right {
+    border-radius: 0 0 90px 0px;
+    transform-box: skew(20deg);
+}
+
+.pack-body {
+    border: 1px solid goldenrod;
+    height: auto;
+    box-shadow: 0px 3px 5px gold, 5px 5px 5px goldenrod;
+    //background-image: linear-gradient(to bottom, #ff0a 95%, #00fc), url('../images/pattern3.jpeg');
+    background: url('../images/pattern3.jpeg');
+}
+
+.profit-area {
+    height: 100px;
+    padding: 25px;
+}
+
+.profit-area h1 {
+    text-shadow: 2px 2px #ff0;
+    color: darkslateblue;
+}
+
+.pack-inner h6 {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    font-size: 3em;
+    transform: rotate(0);
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    opacity: .7;
+    color: red;
+}
+
+.pack-wrapper {
+    transition: all .2s ease-in;
+    margin-bottom: 50px!important;
+}
+
+.pack-wrapper:hover {
+    cursor: pointer;
+    opacity: .6;
+}

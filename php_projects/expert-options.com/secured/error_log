@@ -1,0 +1,190 @@
+[11-Jun-2020 07:41:33 UTC] PHP Warning:  require(config.php): failed to open stream: No such file or directory in /home2/vipmagaz/public_html/crypto-benefit.org/secured/index.php on line 12
+[11-Jun-2020 07:41:33 UTC] PHP Fatal error:  require(): Failed opening required 'config.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home2/vipmagaz/public_html/crypto-benefit.org/secured/index.php on line 12
+[11-Jun-2020 23:27:31 Africa/Lagos] PHP Notice:  Undefined variable: addAttch in /home2/vipmagaz/public_html/crypto-benefit.org/secured/index.php on line 2181
+[11-Jun-2020 23:27:32 Africa/Lagos] PHP Fatal error:  Uncaught phpmailerException: SMTP Error: Could not connect to SMTP host. in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php:878
+Stack trace:
+#0 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php(763): PHPMailer->SmtpConnect()
+#1 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php(630): PHPMailer->SmtpSend('Date: Thu, 11 J...', '--b1_d121977c7d...')
+#2 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php(575): PHPMailer->PostSend()
+#3 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/mailerClass.php(97): PHPMailer->Send()
+#4 /home2/vipmagaz/public_html/crypto-benefit.org/secured/index.php(2181): mailer::sendViaPhpmailer(NULL, '', 'Benefit Crypto', 'How far wt tkis...', '', 'Crypto Benefit ...', Array, Array, 'info@crypto-ben...', 'Crypto Benefit ...')
+#5 /home2/vipmagaz/public_html/crypto-benefit.org/secured in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php on line 878
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:18:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:41 Africa/Lagos] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Transactions::updatePlan(), 5 passed in /home2/vipmagaz/public_html/crypto-benefit.org/secured/index.php on line 2753 and exactly 6 expected in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.transactions.php:66
+Stack trace:
+#0 /home2/vipmagaz/public_html/crypto-benefit.org/secured/index.php(2753): Transactions::updatePlan('20% after 1 day', '500', '1000', '15', '1')
+#1 /home2/vipmagaz/public_html/crypto-benefit.org/secured/index.php(126): plans()
+#2 {main}
+  thrown in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.transactions.php on line 66
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 974
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[13-Jun-2020 11:20:56 Africa/Lagos] PHP Notice:  A non well formed numeric value encountered in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 992
+[14-Jun-2020 08:40:00 Africa/Lagos] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Transactions::updatePlan(), 5 passed in /home2/vipmagaz/public_html/crypto-benefit.org/secured/index.php on line 2753 and exactly 6 expected in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.transactions.php:66
+Stack trace:
+#0 /home2/vipmagaz/public_html/crypto-benefit.org/secured/index.php(2753): Transactions::updatePlan('20% after 1 day', '500', '1000', '15', '1')
+#1 /home2/vipmagaz/public_html/crypto-benefit.org/secured/index.php(126): plans()
+#2 {main}
+  thrown in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.transactions.php on line 66
+[14-Jun-2020 08:45:12 Africa/Lagos] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Transactions::updatePlan(), 5 passed in /home2/vipmagaz/public_html/crypto-benefit.org/secured/index.php on line 2753 and exactly 6 expected in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.transactions.php:66
+Stack trace:
+#0 /home2/vipmagaz/public_html/crypto-benefit.org/secured/index.php(2753): Transactions::updatePlan('Bronze ', '1500', '2000', '15', '4')
+#1 /home2/vipmagaz/public_html/crypto-benefit.org/secured/index.php(126): plans()
+#2 {main}
+  thrown in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.transactions.php on line 66
+[14-Jun-2020 11:09:38 Africa/Lagos] PHP Fatal error:  Uncaught phpmailerException: SMTP Error: Could not connect to SMTP host. in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php:878
+Stack trace:
+#0 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php(763): PHPMailer->SmtpConnect()
+#1 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php(630): PHPMailer->SmtpSend('Date: Sun, 14 J...', '--b1_42e917f5f3...')
+#2 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php(575): PHPMailer->PostSend()
+#3 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/mailerClass.php(97): PHPMailer->Send()
+#4 /home2/vipmagaz/public_html/crypto-benefit.org/secured/index.php(2181): mailer::sendViaPhpmailer('', '', 'Testing Mac BEN...', '<h1 style="font...', '', 'Crypto Benefit ...', Array, Array, 'info@crypto-ben...', 'Crypto Benefit ...')
+#5 /home2/vipmagaz/public_html/crypto-benefit.org/secur in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php on line 878
+[14-Jun-2020 11:26:18 Africa/Lagos] PHP Fatal error:  Uncaught Error: Call to a member function bindValue() on boolean in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.transactions.php:70
+Stack trace:
+#0 /home2/vipmagaz/public_html/crypto-benefit.org/secured/index.php(2753): Transactions::updatePlan('20% after 1 day', '10', '50', '15', '2', '1')
+#1 /home2/vipmagaz/public_html/crypto-benefit.org/secured/index.php(126): plans()
+#2 {main}
+  thrown in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.transactions.php on line 70
+[14-Jun-2020 11:40:33 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:40:34 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:40:34 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:40:35 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:40:35 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:40:36 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:40:36 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:40:37 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:40:38 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:40:38 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:40:39 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:40:40 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:40:40 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:40:41 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:40:41 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:40:42 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:40:42 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:40:43 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:40:43 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:40:44 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:40:44 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:41:57 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:41:59 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:41:59 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:42:00 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:42:00 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:42:00 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:42:01 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 11:42:01 Africa/Lagos] PHP Notice:  Undefined index: formToken in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/class.users.php on line 905
+[14-Jun-2020 12:24:55 Africa/Lagos] PHP Fatal error:  Uncaught phpmailerException: SMTP Error: Could not connect to SMTP host. in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php:878
+Stack trace:
+#0 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php(763): PHPMailer->SmtpConnect()
+#1 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php(630): PHPMailer->SmtpSend('Date: Sun, 14 J...', '--b1_6fc3078148...')
+#2 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php(575): PHPMailer->PostSend()
+#3 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/mailerClass.php(97): PHPMailer->Send()
+#4 /home2/vipmagaz/public_html/crypto-benefit.org/secured/index.php(2181): mailer::sendViaPhpmailer('', '', 'Testing Mac ben...', '<h2 style="font...', '', 'Crypto Benefit ...', Array, Array, 'info@crypto-ben...', 'Crypto Benefit ...')
+#5 /home2/vipmagaz/public_html/crypto-benefit.org/secur in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php on line 878
+[14-Jun-2020 12:26:25 Africa/Lagos] PHP Fatal error:  Uncaught phpmailerException: SMTP Error: Could not connect to SMTP host. in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php:878
+Stack trace:
+#0 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php(763): PHPMailer->SmtpConnect()
+#1 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php(630): PHPMailer->SmtpSend('Date: Sun, 14 J...', '--b1_a895ac1154...')
+#2 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php(575): PHPMailer->PostSend()
+#3 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/mailerClass.php(97): PHPMailer->Send()
+#4 /home2/vipmagaz/public_html/crypto-benefit.org/secured/index.php(2181): mailer::sendViaPhpmailer('', '', 'Testing Mac ben...', '<h2 style="font...', '', 'Crypto Benefit ...', Array, Array, 'info@crypto-ben...', 'Crypto Benefit ...')
+#5 /home2/vipmagaz/public_html/crypto-benefit.org/secur in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php on line 878
+[14-Jun-2020 12:26:43 Africa/Lagos] PHP Fatal error:  Uncaught phpmailerException: SMTP Error: Could not connect to SMTP host. in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php:878
+Stack trace:
+#0 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php(763): PHPMailer->SmtpConnect()
+#1 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php(630): PHPMailer->SmtpSend('Date: Sun, 14 J...', '--b1_afb8223669...')
+#2 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php(575): PHPMailer->PostSend()
+#3 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/mailerClass.php(97): PHPMailer->Send()
+#4 /home2/vipmagaz/public_html/crypto-benefit.org/secured/index.php(2181): mailer::sendViaPhpmailer('', '', 'Testing Mac ben...', '<h2 style="font...', '', 'Crypto Benefit ...', Array, Array, 'info@crypto-ben...', 'Crypto Benefit ...')
+#5 /home2/vipmagaz/public_html/crypto-benefit.org/secur in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php on line 878
+[14-Jun-2020 13:29:04 Africa/Lagos] PHP Fatal error:  Uncaught phpmailerException: SMTP Error: Could not connect to SMTP host. in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php:878
+Stack trace:
+#0 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php(763): PHPMailer->SmtpConnect()
+#1 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php(630): PHPMailer->SmtpSend('Date: Sun, 14 J...', '--b1_ace74dfe8b...')
+#2 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php(575): PHPMailer->PostSend()
+#3 /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/mailerClass.php(97): PHPMailer->Send()
+#4 /home2/vipmagaz/public_html/crypto-benefit.org/secured/index.php(2181): mailer::sendViaPhpmailer('', '', 'Test 2', 'Hi. Benefits <b...', '', 'Crypto Benefit ...', Array, Array, 'info@crypto-ben...', 'Crypto Benefit ...')
+#5 /home2/vipmagaz/public_html/crypto-benefit.org/secured/index.php in /home2/vipmagaz/public_html/crypto-benefit.org/secured/assets/class/PHPMailer/class.phpmailer.php on line 878

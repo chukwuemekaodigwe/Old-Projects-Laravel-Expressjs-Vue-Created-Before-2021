@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Migrations &amp; Seeding - Laravel - The PHP Framework For Web Artisans</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="Taylor Otwell">
+    <meta name="description" content="Laravel - The PHP framework for web artisans.">
+    <meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="canonical" href="https://laravel.com/docs/5.8/migrations">
+        <link href="Migrations%20&amp;%20Seeding%20-%20Laravel%20-%20The%20PHP%20Framework%20For%20Web%20Artisans_files/css.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="Migrations%20&amp;%20Seeding%20-%20Laravel%20-%20The%20PHP%20Framework%20For%20Web%20Artisans_files/laravel.css">
+    <link rel="stylesheet" href="Migrations%20&amp;%20Seeding%20-%20Laravel%20-%20The%20PHP%20Framework%20For%20Web%20Artisans_files/flexboxgrid.css">
+    <link rel="stylesheet" type="text/css" href="Migrations%20&amp;%20Seeding%20-%20Laravel%20-%20The%20PHP%20Framework%20For%20Web%20Artisans_files/fonts.css">
+    <link rel="apple-touch-icon" href="https://laravel.com/favicon.png">
+<script src="Migrations%20&amp;%20Seeding%20-%20Laravel%20-%20The%20PHP%20Framework%20For%20Web%20Artisans_files/ga.js"></script><script src="Migrations%20&amp;%20Seeding%20-%20Laravel%20-%20The%20PHP%20Framework%20For%20Web%20Artisans_files/CKYILK3E.json" type="text/javascript" id="_carbonads_projs"></script></head>
+<body class="docs language-php scotchified"><div style="position: relative; overflow: hidden; width: 100%;" class="scotch-panel-wrapper"><div style="position: relative; height: 100%; width: 100%; transform: translate3d(0px, 0px, 0px); backface-visibility: hidden; transition: all 300ms ease 0s;" class="scotch-panel-canvas">
+    <div class="laracon-banner">
+        <!-- <img src="/assets/svg/laracon-logo.svg" alt=""> -->
+
+        Laracon EU tickets are now available!
+        <a href="https://laracon.eu/">Get your tickets today!</a>
+
+<!--         Laracon US 2019 tickets are now available!
+        <a href="https://www.eventbrite.com/e/laracon-us-2019-tickets-51733090065">Get your tickets today!</a> -->
+    </div>
+    <span class="overlay"></span>
+
+    <nav class="main">
+        <a href="https://laravel.com/" class="brand nav-block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="84.1" height="57.6" viewBox="0 0 84.1 57.6"><path fill="#FB503B" d="M83.8 26.9c-.6-.6-8.3-10.3-9.6-11.9-1.4-1.6-2-1.3-2.9-1.2s-10.6 1.8-11.7 1.9c-1.1.2-1.8.6-1.1 1.6.6.9 7 9.9 8.4 12l-25.5 6.1L21.2 1.5c-.8-1.2-1-1.6-2.8-1.5C16.6.1 2.5 1.3 1.5 1.3c-1 .1-2.1.5-1.1 2.9S17.4 41 17.8 42c.4 1 1.6 2.6 4.3 2 2.8-.7 12.4-3.2 17.7-4.6 2.8 5 8.4 15.2 9.5 16.7 1.4 2 2.4 1.6 4.5 1 1.7-.5 26.2-9.3 27.3-9.8 1.1-.5 1.8-.8 1-1.9-.6-.8-7-9.5-10.4-14 2.3-.6 10.6-2.8 11.5-3.1 1-.3 1.2-.8.6-1.4zm-46.3 9.5c-.3.1-14.6 3.5-15.3 3.7-.8.2-.8.1-.8-.2-.2-.3-17-35.1-17.3-35.5-.2-.4-.2-.8 0-.8S17.6 2.4 18 2.4c.5 0 .4.1.6.4 0 0 18.7 32.3 19 32.8.4.5.2.7-.1.8zm40.2 7.5c.2.4.5.6-.3.8-.7.3-24.1 8.2-24.6 8.4-.5.2-.8.3-1.4-.6s-8.2-14-8.2-14L68.1 32c.6-.2.8-.3 1.2.3.4.7 8.2 11.3 8.4 11.6zm1.6-17.6c-.6.1-9.7 2.4-9.7 2.4l-7.5-10.2c-.2-.3-.4-.6.1-.7.5-.1 9-1.6 9.4-1.7.4-.1.7-.2 1.2.5.5.6 6.9 8.8 7.2 9.1.3.3-.1.5-.7.6z"></path></svg>
+            <span>Laravel</span>
+        </a>
+
+        <div class="search nav-block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#A1A1A1" d="M5.8 11.7c-1.6 0-3-.6-4.1-1.7S0 7.4 0 5.8s.6-3 1.7-4.1C2.8.6 4.3 0 5.8 0s3 .6 4.1 1.7c2.3 2.3 2.3 6 0 8.3-1 1.1-2.5 1.7-4.1 1.7zM5.8 1c-1.3 0-2.5.5-3.4 1.4C1.5 3.3 1 4.5 1 5.8s.5 2.5 1.4 3.4c.9.9 2.1 1.4 3.4 1.4s2.5-.5 3.4-1.4c1.9-1.9 1.9-5 0-6.9C8.4 1.5 7.1 1 5.8 1z"></path><path fill="#A1A1A1" d="M15.5 16c-.1 0-.3 0-.3-.1L9.3 10c-.2-.2-.2-.5 0-.7s.5-.2.7 0l5.9 5.9c.2.2.2.5 0 .7-.1.1-.3.1-.4.1z"></path></svg>
+            <span style="position: relative; display: inline-block; direction: ltr;" class="twitter-typeahead"><input dir="auto" style="position: relative; vertical-align: top;" spellcheck="false" autocomplete="off" class="tt-input" placeholder="search" id="search-input" aria-label="search" type="text"><pre style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Whitney SSm A&quot;,&quot;Whitney SSm B&quot;,sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: optimizelegibility; text-transform: none;" aria-hidden="true"></pre><span style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; right: auto;" class="tt-dropdown-menu"><div class="tt-dataset-0"></div></span></span>
+        </div>
+
+        <ul class="main-nav">
+            <li class="nav-docs"><a href="https://laravel.com/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com/">Laracasts</a></li>
+<li class="nav-laravel-news"><a href="https://laravel-news.com/">News</a></li>
+<li class="nav-partners"><a href="https://laravel.com/partners">Partners</a></li>
+<li class="nav-forge"><a href="https://forge.laravel.com/">Forge</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ecosystem <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+
+		<li><a href="https://envoyer.io/">Envoyer</a></li>
+		<li><a href="https://horizon.laravel.com/">Horizon</a></li>
+		<li><a href="https://lumen.laravel.com/">Lumen</a></li>
+		<li><a href="https://nova.laravel.com/">Nova</a></li>
+		<li><a href="https://spark.laravel.com/">Spark</a></li>
+
+		<li class="divider"></li>
+
+		<li><a href="https://laracon.com.au/">Laracon AU</a></li>
+		<li><a href="https://laracon.eu/">Laracon EU</a></li>
+		<li><a href="http://laracon.us/">Laracon US</a></li>
+		<li><a href="https://laracon.net/">Laracon Online</a></li>
+
+		<li class="divider"></li>
+
+		<li><a href="https://blog.laravel.com/">Blog</a></li>
+		<li><a href="https://laravel.com/certification">Certification</a></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="https://larachat.co/">Slack</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+        </ul>
+
+                    <div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			5.0
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/master/migrations">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.8/migrations">5.8</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.7/migrations">5.7</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.6/migrations">5.6</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.5/migrations">5.5</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.4/migrations">5.4</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.3/migrations">5.3</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.2/migrations">5.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.1/migrations">5.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.0/migrations">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/4.2/migrations">4.2</a>
+				</li>
+					</ul>
+	</div>
+</div>
+        
+        <div class="responsive-sidebar-nav">
+            <a href="#" class="toggle-slide menu-link btn">☰</a>
+        </div>
+    </nav>
+
+    <nav style="top: 0px; left: -70%; width: 70%; height: 100%; position: absolute; z-index: 888888; overflow: hidden; backface-visibility: hidden; display: block;" id="slide-menu" class="slide-menu scotch-panel-left" role="navigation">
+
+	<div class="brand">
+		<a href="https://laravel.com/">
+			<img src="Migrations%20&amp;%20Seeding%20-%20Laravel%20-%20The%20PHP%20Framework%20For%20Web%20Artisans_files/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="https://laravel.com/">Home</a></li>
+		<li class="nav-docs"><a href="https://laravel.com/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com/">Laracasts</a></li>
+<li class="nav-laravel-news"><a href="https://laravel-news.com/">News</a></li>
+<li class="nav-partners"><a href="https://laravel.com/partners">Partners</a></li>
+<li class="nav-forge"><a href="https://forge.laravel.com/">Forge</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ecosystem <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+
+		<li><a href="https://envoyer.io/">Envoyer</a></li>
+		<li><a href="https://horizon.laravel.com/">Horizon</a></li>
+		<li><a href="https://lumen.laravel.com/">Lumen</a></li>
+		<li><a href="https://nova.laravel.com/">Nova</a></li>
+		<li><a href="https://spark.laravel.com/">Spark</a></li>
+
+		<li class="divider"></li>
+
+		<li><a href="https://laracon.com.au/">Laracon AU</a></li>
+		<li><a href="https://laracon.eu/">Laracon EU</a></li>
+		<li><a href="http://laracon.us/">Laracon US</a></li>
+		<li><a href="https://laracon.net/">Laracon Online</a></li>
+
+		<li class="divider"></li>
+
+		<li><a href="https://blog.laravel.com/">Blog</a></li>
+		<li><a href="https://laravel.com/certification">Certification</a></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="https://larachat.co/">Slack</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+
+		<ul class="slide-docs-version">
+			<li>
+				<h2>Version</h2>
+
+				<ul>
+					<li>
+													<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			5.0
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/master/migrations">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.8/migrations">5.8</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.7/migrations">5.7</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.6/migrations">5.6</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.5/migrations">5.5</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.4/migrations">5.4</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.3/migrations">5.3</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.2/migrations">5.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.1/migrations">5.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.0/migrations">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/4.2/migrations">4.2</a>
+				</li>
+					</ul>
+	</div>
+</div>
+											</li>
+				</ul>
+			</li>
+		</ul>
+
+		<ul>
+<li>
+<h2>Prologue</h2>
+<ul>
+<li><a href="https://laravel.com/docs/5.0/releases">Release Notes</a></li>
+<li><a href="https://laravel.com/docs/5.0/upgrade">Upgrade Guide</a></li>
+<li><a href="https://laravel.com/docs/5.0/contributions">Contribution Guide</a></li>
+</ul>
+</li>
+<li>
+<h2>Setup</h2>
+<ul>
+<li><a href="https://laravel.com/docs/5.0/installation">Installation</a></li>
+<li><a href="https://laravel.com/docs/5.0/configuration">Configuration</a></li>
+<li><a href="https://laravel.com/docs/5.0/homestead">Homestead</a></li>
+</ul>
+</li>
+<li>
+<h2>The Basics</h2>
+<ul>
+<li><a href="https://laravel.com/docs/5.0/routing">Routing</a></li>
+<li><a href="https://laravel.com/docs/5.0/middleware">Middleware</a></li>
+<li><a href="https://laravel.com/docs/5.0/controllers">Controllers</a></li>
+<li><a href="https://laravel.com/docs/5.0/requests">Requests</a></li>
+<li><a href="https://laravel.com/docs/5.0/responses">Responses</a></li>
+<li><a href="https://laravel.com/docs/5.0/views">Views</a></li>
+</ul>
+</li>
+<li>
+<h2>Architecture Foundations</h2>
+<ul>
+<li><a href="https://laravel.com/docs/5.0/providers">Service Providers</a></li>
+<li><a href="https://laravel.com/docs/5.0/container">Service Container</a></li>
+<li><a href="https://laravel.com/docs/5.0/contracts">Contracts</a></li>
+<li><a href="https://laravel.com/docs/5.0/facades">Facades</a></li>
+<li><a href="https://laravel.com/docs/5.0/lifecycle">Request Lifecycle</a></li>
+<li><a href="https://laravel.com/docs/5.0/structure">Application Structure</a></li>
+</ul>
+</li>
+<li>
+<h2>Services</h2>
+<ul>
+<li><a href="https://laravel.com/docs/5.0/authentication">Authentication</a></li>
+<li><a href="https://laravel.com/docs/5.0/billing">Billing</a></li>
+<li><a href="https://laravel.com/docs/5.0/cache">Cache</a></li>
+<li><a href="https://laravel.com/docs/5.0/collections">Collections</a></li>
+<li><a href="https://laravel.com/docs/5.0/bus">Command Bus</a></li>
+<li><a href="https://laravel.com/docs/5.0/extending">Core Extension</a></li>
+<li><a href="https://laravel.com/docs/5.0/elixir">Elixir</a></li>
+<li><a href="https://laravel.com/docs/5.0/encryption">Encryption</a></li>
+<li><a href="https://laravel.com/docs/5.0/envoy">Envoy</a></li>
+<li><a href="https://laravel.com/docs/5.0/errors">Errors &amp; Logging</a></li>
+<li><a href="https://laravel.com/docs/5.0/events">Events</a></li>
+<li><a href="https://laravel.com/docs/5.0/filesystem">Filesystem / Cloud Storage</a></li>
+<li><a href="https://laravel.com/docs/5.0/hashing">Hashing</a></li>
+<li><a href="https://laravel.com/docs/5.0/helpers">Helpers</a></li>
+<li><a href="https://laravel.com/docs/5.0/localization">Localization</a></li>
+<li><a href="https://laravel.com/docs/5.0/mail">Mail</a></li>
+<li><a href="https://laravel.com/docs/5.0/packages">Package Development</a></li>
+<li><a href="https://laravel.com/docs/5.0/pagination">Pagination</a></li>
+<li><a href="https://laravel.com/docs/5.0/queues">Queues</a></li>
+<li><a href="https://laravel.com/docs/5.0/session">Session</a></li>
+<li><a href="https://laravel.com/docs/5.0/templates">Templates</a></li>
+<li><a href="https://laravel.com/docs/5.0/testing">Unit Testing</a></li>
+<li><a href="https://laravel.com/docs/5.0/validation">Validation</a></li>
+</ul>
+</li>
+<li>
+<h2>Database</h2>
+<ul>
+<li><a href="https://laravel.com/docs/5.0/database">Basic Usage</a></li>
+<li><a href="https://laravel.com/docs/5.0/queries">Query Builder</a></li>
+<li><a href="https://laravel.com/docs/5.0/eloquent">Eloquent ORM</a></li>
+<li><a href="https://laravel.com/docs/5.0/schema">Schema Builder</a></li>
+<li><a href="https://laravel.com/docs/5.0/migrations">Migrations &amp; Seeding</a></li>
+<li><a href="https://laravel.com/docs/5.0/redis">Redis</a></li>
+</ul>
+</li>
+<li>
+<h2>Artisan CLI</h2>
+<ul>
+<li><a href="https://laravel.com/docs/5.0/artisan">Overview</a></li>
+<li><a href="https://laravel.com/docs/5.0/commands">Development</a></li>
+</ul>
+</li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<script async="" type="text/javascript" src="Migrations%20&amp;%20Seeding%20-%20Laravel%20-%20The%20PHP%20Framework%20For%20Web%20Artisans_files/carbon.js" id="_carbonads_js"></script><div id="carbonads"><span><span class="carbon-wrap"><a href="https://srv.carbonads.net/ads/click/x/GTND42QNC6YDT23MCTA4YKQMCYYDL23YCWBI6Z3JCWSDT5QJC67IC5QKC6BIKKQECK7DTK3EHJNCLSIZ?segment=placement:laravelcom;" class="carbon-img" target="_blank" rel="noopener"><img style="max-width: 130px;" src="Migrations%20&amp;%20Seeding%20-%20Laravel%20-%20The%20PHP%20Framework%20For%20Web%20Artisans_files/1559234042-Buildkite_CarbonCreative.png" alt="ads via Carbon" border="0" width="130" height="100"></a><a href="https://srv.carbonads.net/ads/click/x/GTND42QNC6YDT23MCTA4YKQMCYYDL23YCWBI6Z3JCWSDT5QJC67IC5QKC6BIKKQECK7DTK3EHJNCLSIZ?segment=placement:laravelcom;" class="carbon-text" target="_blank" rel="noopener">Fast, secure, and scalable CI/CD for all your software projects. Try Buildkite today.</a></span><a href="http://carbonads.net/?utm_source=laravelcom&amp;utm_medium=ad_via_link&amp;utm_campaign=in_unit&amp;utm_term=carbon" class="carbon-poweredby" target="_blank" rel="noopener">ads via Carbon</a></span></div>
+		<small><a href="#" id="doc-expand" style="font-size: 11px; color: #B8B8B8;">Expand All</a></small>
+		<ul>
+<li>
+<h2 tabindex="0">Prologue</h2>
+<ul>
+<li><a href="https://laravel.com/docs/5.0/releases">Release Notes</a></li>
+<li><a href="https://laravel.com/docs/5.0/upgrade">Upgrade Guide</a></li>
+<li><a href="https://laravel.com/docs/5.0/contributions">Contribution Guide</a></li>
+</ul>
+</li>
+<li>
+<h2 tabindex="0">Setup</h2>
+<ul>
+<li><a href="https://laravel.com/docs/5.0/installation">Installation</a></li>
+<li><a href="https://laravel.com/docs/5.0/configuration">Configuration</a></li>
+<li><a href="https://laravel.com/docs/5.0/homestead">Homestead</a></li>
+</ul>
+</li>
+<li>
+<h2 tabindex="0">The Basics</h2>
+<ul>
+<li><a href="https://laravel.com/docs/5.0/routing">Routing</a></li>
+<li><a href="https://laravel.com/docs/5.0/middleware">Middleware</a></li>
+<li><a href="https://laravel.com/docs/5.0/controllers">Controllers</a></li>
+<li><a href="https://laravel.com/docs/5.0/requests">Requests</a></li>
+<li><a href="https://laravel.com/docs/5.0/responses">Responses</a></li>
+<li><a href="https://laravel.com/docs/5.0/views">Views</a></li>
+</ul>
+</li>
+<li>
+<h2 tabindex="0">Architecture Foundations</h2>
+<ul>
+<li><a href="https://laravel.com/docs/5.0/providers">Service Providers</a></li>
+<li><a href="https://laravel.com/docs/5.0/container">Service Container</a></li>
+<li><a href="https://laravel.com/docs/5.0/contracts">Contracts</a></li>
+<li><a href="https://laravel.com/docs/5.0/facades">Facades</a></li>
+<li><a href="https://laravel.com/docs/5.0/lifecycle">Request Lifecycle</a></li>
+<li><a href="https://laravel.com/docs/5.0/structure">Application Structure</a></li>
+</ul>
+</li>
+<li>
+<h2 tabindex="0">Services</h2>
+<ul>
+<li><a href="https://laravel.com/docs/5.0/authentication">Authentication</a></li>
+<li><a href="https://laravel.com/docs/5.0/billing">Billing</a></li>
+<li><a href="https://laravel.com/docs/5.0/cache">Cache</a></li>
+<li><a href="https://laravel.com/docs/5.0/collections">Collections</a></li>
+<li><a href="https://laravel.com/docs/5.0/bus">Command Bus</a></li>
+<li><a href="https://laravel.com/docs/5.0/extending">Core Extension</a></li>
+<li><a href="https://laravel.com/docs/5.0/elixir">Elixir</a></li>
+<li><a href="https://laravel.com/docs/5.0/encryption">Encryption</a></li>
+<li><a href="https://laravel.com/docs/5.0/envoy">Envoy</a></li>
+<li><a href="https://laravel.com/docs/5.0/errors">Errors &amp; Logging</a></li>
+<li><a href="https://laravel.com/docs/5.0/events">Events</a></li>
+<li><a href="https://laravel.com/docs/5.0/filesystem">Filesystem / Cloud Storage</a></li>
+<li><a href="https://laravel.com/docs/5.0/hashing">Hashing</a></li>
+<li><a href="https://laravel.com/docs/5.0/helpers">Helpers</a></li>
+<li><a href="https://laravel.com/docs/5.0/localization">Localization</a></li>
+<li><a href="https://laravel.com/docs/5.0/mail">Mail</a></li>
+<li><a href="https://laravel.com/docs/5.0/packages">Package Development</a></li>
+<li><a href="https://laravel.com/docs/5.0/pagination">Pagination</a></li>
+<li><a href="https://laravel.com/docs/5.0/queues">Queues</a></li>
+<li><a href="https://laravel.com/docs/5.0/session">Session</a></li>
+<li><a href="https://laravel.com/docs/5.0/templates">Templates</a></li>
+<li><a href="https://laravel.com/docs/5.0/testing">Unit Testing</a></li>
+<li><a href="https://laravel.com/docs/5.0/validation">Validation</a></li>
+</ul>
+</li>
+<li>
+<h2 class="is-active" tabindex="0">Database</h2>
+<ul>
+<li><a href="https://laravel.com/docs/5.0/database">Basic Usage</a></li>
+<li><a href="https://laravel.com/docs/5.0/queries">Query Builder</a></li>
+<li><a href="https://laravel.com/docs/5.0/eloquent">Eloquent ORM</a></li>
+<li><a href="https://laravel.com/docs/5.0/schema">Schema Builder</a></li>
+<li style="font-weight: bold;"><a href="https://laravel.com/docs/5.0/migrations">Migrations &amp; Seeding</a></li>
+<li><a href="https://laravel.com/docs/5.0/redis">Redis</a></li>
+</ul>
+</li>
+<li>
+<h2 tabindex="0">Artisan CLI</h2>
+<ul>
+<li><a href="https://laravel.com/docs/5.0/artisan">Overview</a></li>
+<li><a href="https://laravel.com/docs/5.0/commands">Development</a></li>
+</ul>
+</li>
+</ul>
+	</section>
+
+	
+
+	<article>
+		<h1>Migrations &amp; Seeding</h1>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#creating-migrations">Creating Migrations</a></li>
+<li><a href="#running-migrations">Running Migrations</a></li>
+<li><a href="#rolling-back-migrations">Rolling Back Migrations</a></li>
+<li><a href="#database-seeding">Database Seeding</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2><a href="#introduction">Introduction</a></h2>
+<p>Migrations are a type of version control for your database. They 
+allow a team to modify the database schema and stay up to date on the 
+current schema state. Migrations are typically paired with the <a href="https://laravel.com/docs/5.0/schema">Schema Builder</a> to easily manage your application's schema.</p>
+<p><a name="creating-migrations"></a></p>
+<h2><a href="#creating-migrations">Creating Migrations</a></h2>
+<p>To create a migration, you may use the <code class=" language-php">make<span class="token punctuation">:</span>migration</code> command on the Artisan CLI:</p>
+<pre class=" language-php"><code class=" language-php">php artisan make<span class="token punctuation">:</span>migration create_users_table</code></pre>
+<p>The migration will be placed in your <code class=" language-php">database<span class="token operator">/</span>migrations</code> folder, and will contain a timestamp which allows the framework to determine the order of the migrations.</p>
+<p>The <code class=" language-php"><span class="token operator">--</span>table</code> and <code class=" language-php"><span class="token operator">--</span>create</code> options may also be used to indicate the name of the table, and whether the migration will be creating a new table:</p>
+<pre class=" language-php"><code class=" language-php">php artisan make<span class="token punctuation">:</span>migration add_votes_to_users_table <span class="token operator">--</span>table<span class="token operator">=</span>users
+
+php artisan make<span class="token punctuation">:</span>migration create_users_table <span class="token operator">--</span>create<span class="token operator">=</span>users</code></pre>
+<p><a name="running-migrations"></a></p>
+<h2><a href="#running-migrations">Running Migrations</a></h2>
+<h4>Running All Outstanding Migrations</h4>
+<pre class=" language-php"><code class=" language-php">php artisan migrate</code></pre>
+<blockquote>
+<p><strong>Note:</strong> If you receive a "class not found" error when running migrations, try running the <code class=" language-php">composer dump<span class="token operator">-</span>autoload</code> command.</p>
+</blockquote>
+<h3>Forcing Migrations In Production</h3>
+<p>Some migration operations are destructive, meaning they may cause you
+ to lose data. In order to protect you from running these commands 
+against your production database, you will be prompted for confirmation 
+before these commands are executed. To force the commands to run without
+ a prompt, use the <code class=" language-php"><span class="token operator">--</span>force</code> flag:</p>
+<pre class=" language-php"><code class=" language-php">php artisan migrate <span class="token operator">--</span>force</code></pre>
+<p><a name="rolling-back-migrations"></a></p>
+<h2><a href="#rolling-back-migrations">Rolling Back Migrations</a></h2>
+<h4>Rollback The Last Migration Operation</h4>
+<pre class=" language-php"><code class=" language-php">php artisan migrate<span class="token punctuation">:</span>rollback</code></pre>
+<h4>Rollback all migrations</h4>
+<pre class=" language-php"><code class=" language-php">php artisan migrate<span class="token punctuation">:</span>reset</code></pre>
+<h4>Rollback all migrations and run them all again</h4>
+<pre class=" language-php"><code class=" language-php">php artisan migrate<span class="token punctuation">:</span>refresh
+
+php artisan migrate<span class="token punctuation">:</span>refresh <span class="token operator">--</span>seed</code></pre>
+<p><a name="database-seeding"></a></p>
+<h2><a href="#database-seeding">Database Seeding</a></h2>
+<p>Laravel also includes a simple way to seed your database with test data using seed classes. All seed classes are stored in <code class=" language-php">database<span class="token operator">/</span>seeds</code>. Seed classes may have any name you wish, but probably should follow some sensible convention, such as <code class=" language-php">UserTableSeeder</code>, etc. By default, a <code class=" language-php">DatabaseSeeder</code> class is defined for you. From this class, you may use the <code class=" language-php">call</code> method to run other seed classes, allowing you to control the seeding order.</p>
+<h4>Example Database Seed Class</h4>
+<pre class=" language-php"><code class=" language-php"><span class="token keyword">class</span> <span class="token class-name">DatabaseSeeder</span> <span class="token keyword">extends</span> <span class="token class-name">Seeder</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">run<span class="token punctuation">(</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token this">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">call<span class="token punctuation">(</span></span><span class="token string">'UserTableSeeder'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token this">$this</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token property">command</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">info<span class="token punctuation">(</span></span><span class="token string">'User table seeded!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">UserTableSeeder</span> <span class="token keyword">extends</span> <span class="token class-name">Seeder</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">run<span class="token punctuation">(</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token scope">DB<span class="token punctuation">::</span></span><span class="token function">table<span class="token punctuation">(</span></span><span class="token string">'users'</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">delete<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token scope">User<span class="token punctuation">::</span></span><span class="token function">create<span class="token punctuation">(</span></span><span class="token punctuation">[</span><span class="token string">'email'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string">'foo@bar.com'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span></code></pre>
+<p>To seed your database, you may use the <code class=" language-php">db<span class="token punctuation">:</span>seed</code> command on the Artisan CLI:</p>
+<pre class=" language-php"><code class=" language-php">php artisan db<span class="token punctuation">:</span>seed</code></pre>
+<p>By default, the <code class=" language-php">db<span class="token punctuation">:</span>seed</code> command runs the <code class=" language-php">DatabaseSeeder</code> class, which may be used to call other seed classes. However, you may use the <code class=" language-php"><span class="token operator">--</span><span class="token keyword">class</span></code> option to specify a specific seeder class to run individually:</p>
+<pre class=" language-php"><code class=" language-php">php artisan db<span class="token punctuation">:</span>seed <span class="token operator">--</span><span class="token keyword">class</span><span class="token operator">=</span>UserTableSeeder</code></pre>
+<p>You may also seed your database using the <code class=" language-php">migrate<span class="token punctuation">:</span>refresh</code> command, which will also rollback and re-run all of your migrations:</p>
+<pre class=" language-php"><code class=" language-php">php artisan migrate<span class="token punctuation">:</span>refresh <span class="token operator">--</span>seed</code></pre>
+	</article>
+</div>
+
+    <footer class="main">
+        <ul>
+            <li class="nav-docs"><a href="https://laravel.com/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com/">Laracasts</a></li>
+<li class="nav-laravel-news"><a href="https://laravel-news.com/">News</a></li>
+<li class="nav-partners"><a href="https://laravel.com/partners">Partners</a></li>
+<li class="nav-forge"><a href="https://forge.laravel.com/">Forge</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ecosystem <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+
+		<li><a href="https://envoyer.io/">Envoyer</a></li>
+		<li><a href="https://horizon.laravel.com/">Horizon</a></li>
+		<li><a href="https://lumen.laravel.com/">Lumen</a></li>
+		<li><a href="https://nova.laravel.com/">Nova</a></li>
+		<li><a href="https://spark.laravel.com/">Spark</a></li>
+
+		<li class="divider"></li>
+
+		<li><a href="https://laracon.com.au/">Laracon AU</a></li>
+		<li><a href="https://laracon.eu/">Laracon EU</a></li>
+		<li><a href="http://laracon.us/">Laracon US</a></li>
+		<li><a href="https://laracon.net/">Laracon Online</a></li>
+
+		<li class="divider"></li>
+
+		<li><a href="https://blog.laravel.com/">Blog</a></li>
+		<li><a href="https://laravel.com/certification">Certification</a></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="https://larachat.co/">Slack</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+        </ul>
+        <p>Laravel is a trademark of Taylor Otwell. Copyright © Taylor Otwell.</p>
+        <p class="less-significant">
+            <a href="http://jackmcdade.com/">
+                Designed by<br>
+                <svg xmlns="http://www.w3.org/2000/svg" width="128.2" height="28" viewBox="0 0 128.2 28"><g fill="#c3c3c3"><path d="M14.2.4v1.4l-1.4-.3.3 4.5c.1 1.5 0 3-.1 4.5 0 .4-.1.8-.1 1.2-.1.4-.1.8-.3 1.2-.1.4-.3.7-.5 1.1-.2.3-.5.6-.9.9-.4.2-.9.4-1.5.6-.6.2-1.1.3-1.6.3-.6 0-1.2-.1-1.6-.3-.5-.2-.9-.6-1.1-1-.3-.5-.5-1-.6-1.6-.1-.6-.1-1.3 0-2.1 0-.2.1-.5.2-.7-.1-.2 0-.4.1-.6l.3-.6 1.1.4c.2 0 .5.1.8.2.3.1.5.1.6.2 0 .2 0 .4-.1.5-.1.2-.1.3-.2.4-.1.1-.2.3-.2.4-.1.2-.1.3-.1.5L6 10.8c-.1.3-.2.7-.2 1.1 0 .4.1.8.2 1.2.2.4.4.7.6 1 .3.3.6.4 1 .3.6 0 1.1-.3 1.4-.6.3-.4.5-.9.7-1.7.1-.7.2-1.6.2-2.8V5.4c0-.6-.1-1.3-.1-2-.1-.6-.2-1.3-.3-2H5.7c-.7 0-1.5 0-2.2.2-.3.1-.6.2-1 .4-.3.1-.6.4-.9.6-.2.3-.4.6-.5 1-.1.3-.1.7 0 1 .1.5.3.8.4.9v-.1c0-.4.1-.8.4-1 .3-.2.6-.3.9-.3.3 0 .6.1.9.3.3.2.4.6.4 1s-.1.8-.4 1c-.3.2-.6.3-1 .3-.8 0-1.4-.2-1.8-.7-.4-.4-.7-.9-.8-1.5C0 4 0 3.4.2 2.7c.2-.6.5-1.1 1-1.5.4-.3.8-.5 1.2-.7.4-.1.9-.2 1.4-.3.5-.1.9-.1 1.4-.1h2.9c.6 0 1.1 0 1.6.1.5 0 1 .1 1.5.1s1 .1 1.5.1c.4.1.9.1 1.5 0zM25.2 14.3c0 .2.1.4.1.6 0 .2.1.4.1.7-1-.1-2-.2-3-.1-1.1.1-2.1.2-3 .4 0-.2-.1-.4-.1-.5 0-.2-.1-.4-.1-.5.2 0 .5-.1.7-.1.2 0 .4-.1.6-.1-.1-1.5-.3-3.1-.5-4.6-.5.1-.9.1-1.4.2-.5.1-.9.1-1.4.2-.2.7-.3 1.3-.5 2s-.3 1.3-.5 2h.6c.1 0 .3 0 .4.1v.9c0 .1 0 .2-.1.3H14v-1.2h1c.2-.5.3-1 .4-1.5.1-.5.3-1 .4-1.5.2-.6.3-1.2.5-1.7.2-.6.3-1.2.5-1.7.2-1.1.4-2.1.6-3.2.2-1.1.3-2.1.4-3.2h-1.4c0-.2.1-.4.1-.6 0-.2 0-.4.1-.6h5.8l.2 1.2h-1c.3 2.1.7 4.3 1 6.5.3 2.2.7 4.4 1 6.5h1.6zM17.5 9c.4-.1.7-.1 1.1-.2.4-.1.8-.1 1.2-.2-.2-1-.3-2-.5-2.9-.2-1-.4-1.9-.6-2.9-.2 1-.4 2.1-.5 3.1-.3 1-.5 2.1-.7 3.1zM36.7 10.4h-.6c0 .6 0 1.2-.2 1.9-.2.6-.5 1.2-1 1.6-.5.5-1 .9-1.6 1.1-.6.3-1.3.4-2 .5-.6.1-1.1.1-1.8 0-.6-.1-1.1-.4-1.6-.7-.2-.2-.5-.4-.8-.7-.3-.3-.5-.5-.6-.8-.3-.5-.5-1-.6-1.5-.2-.5-.3-.9-.4-1.4-.1-.5-.2-1-.2-1.5s0-1 .1-1.6c.2-1 .4-2 .8-2.9.4-.9.8-1.7 1.4-2.3.5-.7 1.2-1.2 1.9-1.6.7-.3 1.4-.5 2.2-.5.3 0 .5 0 .8.1.3.1.5.2.7.4.3.3.7.7 1 1.2.3.5.6 1.2.7 1.9h.6v.6l-2.5.4c-.3.1-.5.1-.6 0-.1 0-.2-.1-.2-.2-.1-.1-.1-.2 0-.3h.4c.2-.2.3-.3.3-.6v-.7c0-.5-.2-.9-.5-1.3l-.4-.4c-.2-.1-.4-.1-.6 0-.2 0-.4.2-.6.4-.2.2-.4.5-.5.9-.3.2-.4.6-.5.9-.1.3-.2.5-.2.7-.6 2.6-.7 5.3-.2 8 .1.3.2.7.3 1s.3.6.5.9c.2.3.5.5.8.7.3.2.6.2 1 .1.6-.1 1-.4 1.4-1 .3-.5.6-1.1.7-1.8.1-.3.1-.6.1-.9v-.5c-.2 0-.4 0-.6-.1-.1-.1-.2-.2-.2-.3 0-.1 0-.2.1-.3h3.4c0 .1 0 .2-.1.3-.1.1-.1.2-.1.3z"></path><path d="M48 14.2c.1.2.3.3.5.4.2.1.5.1.7 0 .1.1.1.2.1.4s-.1.3-.2.4c-.1.1-.2.2-.4.2h-1.4c-.3 0-.7 0-1-.1-.3-.1-.7-.2-1-.4-.3-.2-.5-.4-.7-.7-.2-.3-.3-.6-.3-1V9.9v-.4c0-.2-.1-.3-.2-.5s-.3-.3-.4-.4c-.2-.1-.4-.1-.7-.1-.1 0-.2 0-.5.1-.2.3-.3.5-.5.8-.2.3-.3.5-.5.7 0 .8 0 1.5-.1 2.2 0 .7-.1 1.5-.1 2.1h1.4v1.1c-.5 0-.9.1-1.3 0-.4 0-.8 0-1.2-.1-.4 0-.8-.1-1.2-.1H37.3c-.1 0-.2 0-.3-.1-.1 0-.1-.1-.1-.2s-.1-.3-.1-.4v-.4c0-.1.1-.2.1-.2.2.1.4.2.6.1s.4-.2.5-.4c0-.1.1-.3.1-.7 0-.4 0-.9.1-1.6 0-.6.1-1.3.1-2.1s0-1.6.1-2.4c0-.8 0-1.5.1-2.3 0-.7.1-1.3.1-1.8v-.7c0-.2-.1-.4-.2-.6-.1-.2-.3-.3-.5-.4-.2-.1-.4 0-.6.1 0-.2-.1-.5-.1-.7 0-.2 0-.4-.1-.7 1 0 2 .1 3 .1.9 0 1.9.1 3 .1v.3c0 .1 0 .3.1.4v.4c0 .1 0 .2-.1.2-.1.1-.2.1-.3.1-.1 0-.2 0-.4-.1-.1-.1-.3-.1-.4-.2-.1-.1-.3-.1-.3-.1-.1.9-.1 1.9-.1 2.9s-.1 2-.1 3.1c.7-1.2 1.4-2.5 2-3.8.2-.3.3-.6.4-.9.1-.3.3-.6.5-.9.2-.3.4-.5.7-.7.3.3.6.2.9.1.3-.1.7-.1 1 0 .3.1.6.2.9.5.2.3.4.6.4 1s.1.8 0 1.1v.5c0 .2-.1.3-.2.4-.1.2-.2.3-.4.4-.2.1-.4.1-.5.2-.1 0-.3.1-.4.1h-.4c-.2-.3-.4-.4-.4-.6-.1-.2-.1-.4 0-.5.1-.2.2-.3.3-.3.1 0 .2-.1.4-.1.2-.1.3-.2.3-.3.1-.2.1-.3.1-.5 0-.3-.1-.5-.1-.7-.1-.2-.2-.3-.3-.3-.2 0-.3 0-.5.1s-.3.2-.5.4-.3.4-.4.6c-.1.2-.3.5-.4.7-.1.3-.3.6-.4.8-.2.2-.3.5-.4.8-.4.9-.8 1.7-1.2 2.5.3 0 .6-.1 1 0h1c.3 0 .7.1 1 .2.3.1.6.3.8.6.3.3.4.6.5 1 .1.4.1.8.2 1.1l.2 2.1c0 .2.1.5.1.7 0 .4.1.7.3.9zM71.7 13.9c.2.2.4.4.7.5.3.1.5 0 .8-.1 0 .2.1.3.1.6.1.2.1.4.1.6h-1.1s-.8 0-1.3.1h-2.3v-.2c0-.1.1-.2.2-.3.1-.1.2-.2.4-.3.2-.1.3-.1.6-.1.1 0 .1-.2.1-.7v-1.6c0-.6 0-1.2-.1-1.9s0-1.1 0-1.5V6.4c0-.7.1-1.5.1-2.2-.6 1.3-1.1 2.7-1.6 4.1-.5 1.5-1 3-1.5 4.4 0 0 .1.1.1.2-.2 0-.4 0-.7.1-.3.1-.5.1-.7.1-.5-1.9-1.1-3.7-1.6-5.5-.5-1.8-1.1-3.6-1.6-5.5-.1 1-.1 2-.1 3 0 1.1-.1 2.1-.1 3.2s0 2.1-.1 3.2c0 1-.1 2-.1 3h1.4v1.1c-.5 0-.9.1-1.3 0-.4 0-.8 0-1.2-.1-.4 0-.8-.1-1.2-.1H58c-.1 0-.2 0-.3-.1-.1 0-.1-.1-.1-.2s-.1-.3-.1-.4v-.4c0-.1.1-.2.1-.2.2.1.4.2.6.1s.4-.2.5-.4c0-.1.1-.3.1-.7 0-.4 0-.9.1-1.6 0-.6.1-1.3.1-2.1V7.2c0-.8 0-1.5.1-2.3 0-.7.1-1.3.1-1.8v-.7c0-.2-.1-.4-.2-.6-.1-.2-.3-.3-.5-.4-.2-.1-.4 0-.6.1 0-.2-.1-.5-.1-.7 0-.2 0-.4-.1-.7 1 0 2 .1 3 .1.9 0 1.9.1 3 .1 0 .3-.1.5-.4.7.3 1.3.6 2.6 1 3.9l1.2 3.9c.2-.6.4-1.3.6-1.9l.6-1.8c.3-.5.5-1.1.8-1.7.2-.6.4-1.3.6-2-.1 0-.3 0-.4-.1-.1 0-.2 0-.4-.1-.1 0-.1-.1-.1-.3 0-.1.1-.2.1-.3.1-.1.2-.1.3-.1h4.5c.1 0 .3.1.4.2.1.1.2.2.2.4s0 .3-.2.3c-.1-.1-.2-.1-.3-.1-.1 0-.2.1-.3.1-.2.4-.3.8-.4 1.3-.1.5-.1.9-.1 1.4-.2 2.8-.2 5.6 0 8.4 0 .3 0 .5.1.7-.1.3 0 .5.2.7zM81.7 12h-.4c0 .4 0 .9-.2 1.3-.1.4-.4.8-.7 1.1-.3.3-.7.6-1.1.8-.4.2-.9.3-1.3.4-.4.1-.8 0-1.2 0-.4-.1-.8-.2-1.1-.5-.2-.1-.3-.3-.5-.5s-.3-.4-.4-.6c-.2-.4-.3-.7-.4-1-.1-.3-.2-.6-.3-1-.1-.3-.1-.6-.1-1 0-.3 0-.7.1-1.1.1-.7.3-1.4.5-2 .3-.6.6-1.1.9-1.6s.8-.8 1.3-1.1c.5-.3 1-.4 1.5-.4.2 0 .4 0 .6.1.2.1.3.1.5.3.2.2.4.4.6.8.2.4.4.8.5 1.3h.4v.4l-1.7.3c-.2.1-.3.1-.4 0-.1 0-.1-.1-.2-.2v-.2h.4c.1-.1.2-.2.2-.4v-.5c0-.3-.1-.6-.3-.9l-.3-.3c-.1-.1-.2-.1-.4 0-.1 0-.3.1-.4.3-.1.2-.3.4-.4.6l-.3.6c-.1.2-.1.4-.1.5-.4 1.8-.5 3.6-.1 5.5.1.2.1.4.2.7l.3.6c.1.2.3.3.6.5.2.1.4.1.7.1.4-.1.7-.3 1-.7.2-.4.4-.8.5-1.2 0-.2.1-.4.1-.6v-.3h-.4c-.1 0-.1-.1-.1-.2s0-.2.1-.2h2.4v.2c-.5-.1-.5 0-.6.1z"></path><path d="M83.5 14.2c.2-4.3.3-8.5.2-12.8h-1.8V.9.4c.7 0 1.3 0 2-.1.7 0 1.3 0 2-.1.8-.2 1.6-.2 2.4-.1.8.1 1.6.3 2.4.5.7.3 1.4.7 1.9 1.2s.9 1.1 1.1 1.8c.3 1.3.4 2.5.3 3.8 0 1.2-.2 2.4-.3 3.6 0 .4-.1.8-.2 1.2-.1.4-.3.8-.5 1.1-.3.5-.8 1-1.3 1.3-.5.3-1.1.5-1.7.6-.5.1-.9.2-1.4.1-.5 0-.9 0-1.4-.1h-4.9c-.2-.4-.1-.8.2-1.1.2-.2.3-.2.5-.3.2.3.4.3.5.4zm5.9-12.3c-.4-.3-.8-.5-1.3-.6-.5-.1-1-.1-1.5-.1-.3 4.5-.2 9.1.4 13.6.2 0 .4 0 .5-.1.2 0 .4-.1.6-.1.3-.1.6-.2.9-.4.3-.2.6-.4.8-.7.2-.3.4-.6.5-1s.2-.7.2-1.1c.4-2.1.4-4.2.2-6.3-.1-.6-.2-1.2-.4-1.9 0-.4-.4-.9-.9-1.3zM102.4 9.7c-.6-.1-1.3-.1-2 0s-1.4.4-2 .8l-.2-1.4.9-.1c0-.4-.1-.7-.1-1 0-.2-.1-.5-.1-.9-.3 0-.6.1-.9.1-.3 0-.6.1-1 .1-.2.7-.3 1.3-.4 1.8-.1.5-.2 1.1-.4 1.6l.2-.1.7.6c-.4.2-.8.6-1.2 1.1-.4.5-.7 1-.9 1.5l-.9-.5c0-.1.1-.2.2-.4s.2-.3.2-.4c.1-.2.2-.5.3-1 .1-.4.2-.9.4-1.3.1-.5.2-.9.3-1.3.1-.4.2-.7.2-.9l.3-1.2.3-1.2c.2-.7.3-1.4.4-2.1.1-.7.2-1.4.3-2.2h-.6l.1-.8 4-.1.1.8h-.2-.2c.1.7.2 1.4.3 2l.3 1.8.3 1.8c.1.6.2 1.3.4 2h.6l.3.9zm-3.6-3.6c-.1-.7-.2-1.3-.3-2-.1-.6-.3-1.3-.4-2-.1.6-.2 1.3-.4 2.1-.1.7-.3 1.5-.5 2.2l1.6-.3z"></path><path d="M124.9 20.1c0-.3.1-.6.3-.8.2-.2.4-.3.7-.4.3-.1.5 0 .8.1.3.1.5.3.6.5.3.4.6.9.7 1.4.2.5.2 1 .2 1.5s-.1 1-.3 1.5c-.2.5-.4 1-.7 1.4-.6.9-1.4 1.6-2.4 2-1 .5-2 .7-3 .7-1.5 0-2.8-.3-3.9-1s-2.1-1.4-3-2.4c-.9-1-1.8-2.1-2.5-3.2-.8-1.2-1.5-2.3-2.3-3.5-1.1 1.2-2.4 2.2-3.9 3-1.5.8-3 1.1-4.5 1-1.1 0-2.1-.1-3-.5-.9-.3-1.6-.8-2.2-1.4-.6-.6-.9-1.3-1.1-2.2-.2-.8-.1-1.7.2-2.7.3-.9.7-1.6 1.3-2.2.6-.6 1.2-1.1 2-1.5.7-.4 1.5-.6 2.4-.7.8-.1 1.7 0 2.6.2v-5-4.6h-1.8V.8.3l3.7-.1c.8-.2 1.6-.2 2.4-.1.8.1 1.6.3 2.4.5.7.3 1.4.7 1.9 1.2s.9 1.1 1.1 1.8c.3 1.2.4 2.4.3 3.6-.1 1.2-.2 2.5-.4 3.7-.1 1-.4 2-.8 3-.5 1-1 2-1.7 2.9.3.4.6.8.8 1.2.3.4.5.8.8 1.2.5.8 1.1 1.6 1.7 2.5.6.8 1.3 1.6 2 2.4.7.7 1.5 1.3 2.4 1.8s1.8.7 2.9.8c1.1 0 2.1-.2 3-.7.9-.5 1.6-1.2 2.1-2.2.2-.4.3-.8.4-1.3.1-.5 0-.9-.1-1.3-.2.1-.4.2-.6.2-.2 0-.4 0-.6-.1-.2-.1-.4-.2-.5-.4s-.4-.5-.4-.8zm-22 .9c1.5-.4 2.8-1 3.7-1.8.9-.8 1.7-1.7 2.3-2.8-.2-.2-.3-.5-.6-.7-.6-.7-1.2-1.4-1.9-1.9 0 .6.1 1.2.1 1.8 0 .6.1 1.1.2 1.6v.1h-4.3c-.1-.2-.1-.4 0-.7 0-.2.1-.3.3-.5.3-.3.7-.4 1.1-.2l.1-3.5c-.5-.2-1-.3-1.5-.3s-1.1 0-1.6.1c-.6.1-1.1.3-1.6.6s-.9.7-1.3 1.1c-.4.4-.7.9-.9 1.5-.2.5-.3 1.1-.3 1.6 0 .7.2 1.3.6 1.8.4.5.9.9 1.4 1.4.2.2.5.3.8.5.3.1.7.2 1.1.3.4.1.8.1 1.2.1.3 0 .7 0 1.1-.1zm6.4-19.1c-.4-.3-.8-.5-1.2-.6-.5-.1-.9-.1-1.4-.1-.1 1.7-.2 3.4-.3 5.3-.1 1.9-.1 3.7 0 5.6.6.4 1.2.8 1.7 1.4.5.5 1 1.1 1.5 1.6.2-.6.4-1.2.6-1.9.2-.6.3-1.2.3-1.7.2-1.1.2-2.1.3-3.1 0-1 0-2.1-.1-3.1-.1-.6-.2-1.2-.4-1.9-.2-.6-.5-1.1-1-1.5z"></path><path d="M116.5 1.2h-1.8V.4c.5 0 .9 0 1.2-.1s.7 0 1.1 0h1.1s.8 0 1.3-.1c.9 0 1.8 0 2.8-.1.9 0 1.8 0 2.8-.1v3.6h-1.3c-.1 0-.1-.1 0-.1.1-.2.1-.4.1-.6s0-.4-.1-.6l-.3-.6c-.1-.2-.2-.3-.4-.4-.2-.1-.4-.2-.6-.2h-.7c-.3 0-.5.1-.8.1-.3.1-.5.2-.6.4-.1.2-.1.3-.1.3v.3c0 .7-.1 1.3-.1 2 0 .6-.1 1.3-.1 1.9v1c.6-.2 1.2-.3 1.9-.4.6-.1 1.2-.3 1.9-.4 0 .1.1.2.1.3V7c0 .2-.1.3-.1.4-.1.1-.1.2-.1.3-.1.1-.2.1-.4.2-.1 0-.3.1-.4.1-.5.1-.9.2-1.4.3-.5.1-.9.1-1.4.2 0 1-.1 2-.2 2.9-.1 1-.1 1.9-.2 2.9.8.2 1.5.3 2 .1.6-.2 1.2-.5 1.9-1 .2-.1.2-.3.2-.5v-.7c0-.2.1-.5.2-.6.1-.2.3-.3.7-.4.4 0 .6.1.7.4.1.3.2.7.2 1.1 0 .5 0 .9-.1 1.4-.1.5-.1.9 0 1.2h-1.4c-.4 0-.8 0-1.2.1-.4 0-.8 0-1.2.1h-1.3c-.9 0-1.7 0-2.5.1-.7.1-1.6.1-2.4.1-.2-.2-.2-.4-.2-.7 0-.2.1-.5.3-.6.2-.2.3-.3.6-.3.2-.1.5 0 .7.1.1-2.1.2-4.3.1-6.5-.7-2.2-.7-4.3-.5-6.5z"></path></g></svg>
+            </a>
+        </p>
+    </footer>
+
+    <script>
+        var algolia_app_id      = '8BB87I11DE';
+        var algolia_search_key  = '8e1d446d61fce359f69cd7c8b86a50de';
+        var version             = '5.0';
+    </script>
+
+    <script id="search_suggestion_template" type="text/template">
+	<div class="autocomplete-wrapper">
+		{{#_highlightResult.h1}}
+		<div class="h1">
+			{{{ _highlightResult.h1.value }}}
+		</div>
+		{{/_highlightResult.h1}}
+
+		<div class="sub-section">
+			{{#_highlightResult.h2}}
+			<div class="h2">
+				<span class="hash">#</span> {{{ _highlightResult.h2.value }}}
+			</div>
+			{{/_highlightResult.h2}}
+
+			{{#_highlightResult.h3}}
+			<div class="h3">
+				> {{{ _highlightResult.h3.value }}}
+			</div>
+			{{/_highlightResult.h3}}
+
+			{{#_highlightResult.h4}}
+			<div class="h4">
+				> {{{ _highlightResult.h4.value }}}
+			</div>
+			{{/_highlightResult.h4}}
+		</div>
+
+		{{#_highlightResult.content}}
+		<div class="content">
+			{{{ _highlightResult.content.value }}}
+		</div>
+		{{/_highlightResult.content}}
+	</div>
+</script>
+
+<script id="search_empty_template" type="text/template">
+	<div class="autocomplete-wrapper empty">
+		<div class="h2">We didn't find any result for "{{query}}". Sorry!</div>
+	</div>
+</script>
+
+<script id="search_footer_template" type="text/template">
+	<div class="footer">
+		<a target="_blank" href="https://www.algolia.com/?utm_source=laravel&utm_medium=link&utm_campaign=laravel_documentation_search">
+			<img width="105" src="/assets/img/algolia-logo.svg">
+			<div style="clear: both"></div>
+		</a>
+	</div>
+</script>
+
+    <script src="Migrations%20&amp;%20Seeding%20-%20Laravel%20-%20The%20PHP%20Framework%20For%20Web%20Artisans_files/laravel.js"></script>
+    <script src="Migrations%20&amp;%20Seeding%20-%20Laravel%20-%20The%20PHP%20Framework%20For%20Web%20Artisans_files/viewport-units-buggyfill.js"></script>
+    <script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+        var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
+        (function(d,t){
+            var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)
+        }(document,'script'));
+    </script><p style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); margin: 0px;"></p>
+
+
+</div></div></body></html>

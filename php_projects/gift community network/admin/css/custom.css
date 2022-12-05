@@ -1,0 +1,266 @@
+/// custom css
+.card-no-border .page-wrapper {
+    background-image: linear-gradient(to right bottom, rgba(51, 51, 153, 0.667), rgb(255, 153, 153), rgb(204, 51, 204))!important;
+}
+
+.card {
+    background-color: #ffcc99!important;
+}
+
+.navbar-header {
+    background-image: linear-gradient(to left, #ff9999 60%, #ffcc99) !important;
+}
+
+.navbar-collapse {
+    background-image: radial-gradient(circle at left, #ff9999, rgba(51, 51, 153, 0.667))!important;
+}
+
+// menu bar, the menu li div
+.card-no-border .left-sidebar,
+.card-no-border .sidebar-nav {
+    background: linear-gradient(#ff0033, #ffcc99)!important;
+}
+
+.slimScrollDiv {
+    background-color: rgba(0, 0, 0, 0.3) 0 0 center url();
+}
+
+
+/* the norm */
+
+#gritter-notice-wrapper {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 301px;
+    z-index: 9999;
+    background: purple none no-repeat scroll left -30px!important;
+}
+
+#gritter-notice-wrapper.top-left {
+    left: 20px;
+    right: auto;
+}
+
+#gritter-notice-wrapper.bottom-right {
+    top: auto;
+    left: auto;
+    bottom: 20px;
+    right: 20px;
+}
+
+#gritter-notice-wrapper.bottom-left {
+    top: auto;
+    right: auto;
+    bottom: 20px;
+    left: 20px;
+}
+
+.gritter-item-wrapper {
+    position: relative;
+    margin: 0 0 10px 0;
+    background: url('../images/ie-spacer.gif');
+    /* ie7/8 fix */
+}
+
+.gritter-top {
+    background: no-repeat left -30px;
+    height: 10px;
+}
+
+.hover .gritter-top {
+    background-position: right -30px;
+}
+
+.gritter-bottom {
+    background: url(../images/gritter.png) no-repeat left bottom;
+    height: 8px;
+    margin: 0;
+}
+
+.hover .gritter-bottom {
+    background-position: bottom right;
+}
+
+.gritter-item {
+    display: block;
+    background: url(../images/gritter.png) no-repeat left -40px;
+    color: #eee;
+    padding: 2px 11px 8px 11px;
+    font-size: 11px;
+    font-family: verdana;
+}
+
+.hover .gritter-item {
+    background-position: right -40px;
+}
+
+.gritter-item p {
+    padding: 0;
+    margin: 0;
+    word-wrap: break-word;
+}
+
+.gritter-close {
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: 3px;
+    background: url(../images/gritter.png) no-repeat left top;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    text-indent: -9999em;
+}
+
+.gritter-title {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 0 7px 0;
+    display: block;
+    text-shadow: 1px 1px 0 #000;
+    /* Not supported by IE :( */
+}
+
+.gritter-image {
+    width: 48px;
+    height: 48px;
+    float: left;
+}
+
+.gritter-with-image,
+.gritter-without-image {
+    padding: 0;
+}
+
+.gritter-with-image {
+    width: 220px;
+    float: right;
+}
+
+
+/* for the light (white) version of the gritter notice */
+
+.gritter-light .gritter-item,
+.gritter-light .gritter-bottom,
+.gritter-light .gritter-top,
+.gritter-light .gritter-close {
+    background-image: url(../images/gritter-light.png);
+    color: #222;
+}
+
+.gritter-light .gritter-title {
+    text-shadow: none;
+}
+
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.pagination>li {
+    display: inline;
+}
+
+.pagination>li>a,
+.pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #428bca;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.pagination>li:first-child>a,
+.pagination>li:first-child>span {
+    margin-left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.pagination>li:last-child>a,
+.pagination>li:last-child>span {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.pagination>li>a:hover,
+.pagination>li>span:hover,
+.pagination>li>a:focus,
+.pagination>li>span:focus {
+    color: #2a6496;
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+.pagination>.active>a,
+.pagination>.active>span,
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:focus {
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: #428bca;
+    border-color: #428bca;
+}
+
+.pagination>.disabled>span,
+.pagination>.disabled>span:hover,
+.pagination>.disabled>span:focus,
+.pagination>.disabled>a,
+.pagination>.disabled>a:hover,
+.pagination>.disabled>a:focus {
+    color: #777;
+    cursor: not-allowed;
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+.pagination-lg>li>a,
+.pagination-lg>li>span {
+    padding: 10px 16px;
+    font-size: 18px;
+}
+
+.pagination-lg>li:first-child>a,
+.pagination-lg>li:first-child>span {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.pagination-lg>li:last-child>a,
+.pagination-lg>li:last-child>span {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.pagination-sm>li>a,
+.pagination-sm>li>span {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.pagination-sm>li:first-child>a,
+.pagination-sm>li:first-child>span {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.pagination-sm>li:last-child>a,
+.pagination-sm>li:last-child>span {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+input::placeholder {
+    color: rgba(32, 33, 36, 0.38)!important;
+    font-size: 15px;
+}
