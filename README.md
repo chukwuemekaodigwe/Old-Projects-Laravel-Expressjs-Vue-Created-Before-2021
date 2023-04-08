@@ -1,5 +1,6 @@
 ## PHP, Expressjs, Laravel projects
-**This houses good projects and webapps ready for commercial use that I created in the past years , before 2022 **
+**This houses good projects and webapps ready for commercial use that I created in the past years , before 2022
+
 Some of them include:
 
 - a laravel school management site
