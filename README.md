@@ -1,4 +1,4 @@
-### This houses projects I have created before 2023 ###
+## PHP, Expressjs, Laravel projects ##
 They showcases good projects and webapps ready for commercial use. Some of them include:
 --
 - a laravel school management site
